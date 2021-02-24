@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloud.springcloud.dao.PaymentDao">
+    <insert id="create" parameterType="com.cloud.springcloud.entity.Payment" useGeneratedKeys="true" keyProperty="id">
+        insert into payment (serial) values(#{serial})
+    </insert>
+    <resultMap id="BaseResultMap" type="com.cloud.springcloud.entity.Payment">
+        <id column="id" property="id" jdbcType="BIGINT"></id>
+        <id column="serial" property="serial" jdbcType="VARCHAR"></id>
+        <id column="add_time" property="add_time" jdbcType="TIMESTAMP"></id>
+    </resultMap>
+    <select id="getById" parameterType="Long"
+            resultMap="BaseResultMap">
+        select * from payment where id=#{id} limit 1
+    </select>
+</mapper>
