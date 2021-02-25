@@ -11,7 +11,7 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
-    <artifactId>cloud-provider-payment8001</artifactId>
+    <artifactId>cloud-provider-payment8002</artifactId>
 
     <dependencies>
         <dependency>

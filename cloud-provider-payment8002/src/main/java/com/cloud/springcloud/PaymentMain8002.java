@@ -6,16 +6,16 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @PackageName: com.cloud.springcloud
- * @ClassName: PaymentMain8001
- * @Description: This is PaymentMain8001 class by Skwen.
+ * @ClassName: PaymentMain8002
+ * @Description: This is PaymentMain8002 class by Skwen.
  * @Author: Skwen
- * @Date: 2021-02-24 21:53
+ * @Date: 2021-02-24 22:37
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class PaymentMain8001 {
+public class PaymentMain8002 {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8001.class, args);
+        SpringApplication.run(PaymentMain8002.class, args);
         System.out.println("PaymentMain8001-启动完毕!!!");
     }
 }

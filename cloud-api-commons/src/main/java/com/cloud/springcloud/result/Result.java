@@ -1,6 +1,7 @@
 package com.cloud.springcloud.result;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @PackageName: com.boot.hellokebbi.pattern.result
@@ -10,6 +11,7 @@ import lombok.Data;
  * @Date: 2020-12-13 17:41
  */
 @Data
+@NoArgsConstructor
 public class Result {
     private Integer code;
 

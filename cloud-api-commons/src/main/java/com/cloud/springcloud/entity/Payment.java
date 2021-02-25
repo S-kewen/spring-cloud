@@ -1,6 +1,5 @@
 package com.cloud.springcloud.entity;
 
-import jdk.jfr.DataAmount;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -16,6 +15,7 @@ import java.util.Date;
 @Data
 public class Payment implements Serializable {
     private Long id;
+    private Long uid;
     private String serial;
     private Date add_time;
 }
