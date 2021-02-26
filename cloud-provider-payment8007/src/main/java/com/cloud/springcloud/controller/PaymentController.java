@@ -8,6 +8,7 @@ import com.cloud.springcloud.service.PaymentService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +28,8 @@ import java.util.Map;
 public class PaymentController {
     @Autowired
     private PaymentService paymentService;
-
+    @Value("${server.port}")
+    private String port;
     @Resource
     private DiscoveryClient discoveryClient;
     @PostMapping("create")
@@ -65,5 +67,10 @@ public class PaymentController {
         //http://localhost:8002/v1/api/pay/discovery
         //服务发现
         return new Result(StatusCode.OK, StatusMsg.OK, discoveryClient);
+    }
+
+    @RequestMapping("port")
+    public Result port() {
+        return new Result(StatusCode.OK, StatusMsg.OK, port);
     }
 }

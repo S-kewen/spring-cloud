@@ -8,8 +8,10 @@ import com.cloud.springcloud.service.PaymentService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -25,7 +27,8 @@ import java.util.Map;
 public class PaymentController {
     @Autowired
     private PaymentService paymentService;
-
+    @Resource
+    private DiscoveryClient discoveryClient;
     @PostMapping("create")
     public Result create(@RequestBody Payment payment) {
         int count = paymentService.create(payment);
@@ -54,5 +57,12 @@ public class PaymentController {
         List<Map<String, Object>> select = paymentService.getList(payment);
         PageInfo<Map<String, Object>> pageInfo = new PageInfo<>(select);
         return new Result(StatusCode.OK, StatusMsg.OK, pageInfo);
+    }
+
+    @RequestMapping("discovery")
+    public Result discovery() {
+        //http://localhost:8001/v1/api/pay/discovery
+        //服务发现
+        return new Result(StatusCode.OK, StatusMsg.OK, discoveryClient);
     }
 }

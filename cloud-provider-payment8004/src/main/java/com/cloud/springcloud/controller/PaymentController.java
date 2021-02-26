@@ -62,7 +62,7 @@ public class PaymentController {
 
     @RequestMapping("discovery")
     public Result discovery() {
-        //http://localhost:8002/v1/api/pay/discovery
+        //http://localhost:8004/v1/api/pay/discovery
         //服务发现
         return new Result(StatusCode.OK, StatusMsg.OK, discoveryClient);
     }
