@@ -7,6 +7,7 @@ import com.cloud.springcloud.result.StatusMsg;
 import com.cloud.springcloud.service.PaymentService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;

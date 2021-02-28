@@ -35,3 +35,14 @@ ribbon:
 feign:
   hystrix:
     enabled: true
+
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          timeout:
+            enabled: true
+          thread:
+            timeutInMilliseconds: 1000

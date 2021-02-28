@@ -1,5 +1,6 @@
 package com.cloud.springcloud.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -17,5 +18,6 @@ public class Payment implements Serializable {
     private Long id;
     private Long uid;
     private String serial;
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Date add_time;
 }
