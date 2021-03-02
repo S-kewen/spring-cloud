@@ -1,0 +1,24 @@
+server:
+  port: 3344
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/S-kwen/spring-cloud-config
+          label: main
+          search-paths:
+            - spring-cloud-config
+          username: #公开不用写
+          passphrase: #公开不用写
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        healthCheckPath: ${management.context-path}/consul/health
+        healthCheckInterval: 10s
+        heartbeat:
+          enabled: true
+  application:
+    name: cloud-config-center-3344
