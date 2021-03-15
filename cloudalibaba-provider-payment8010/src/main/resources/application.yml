@@ -1,18 +1,12 @@
 server:
-  port: 8007
+  port: 8010
 spring:
   application:
-    name: cloud-payment-service-consul
+    name: cloud-payment-service-nacos
   cloud:
-    consul:
-      host: localhost
-      port: 8500
+    nacos:
       discovery:
-        service-name: ${spring.application.name}
-        healthCheckPath: ${management.context-path}/consul/health
-        healthCheckInterval: 10s
-        heartbeat:
-          enabled: true
+        server-addr:  127.0.0.1:8848
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver

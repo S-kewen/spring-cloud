@@ -28,6 +28,9 @@
         <module>cloud-config-client-3355</module>
         <module>cloud-config-server-3344</module>
         <module>cloud-config-client-3366</module>
+        <module>cloudalibaba-provider-payment8010</module>
+        <module>cloudalibaba-consumer-order85</module>
+        <module>cloudalibaba-config-nacos-client3377</module>
     </modules>
     <packaging>pom</packaging>
 

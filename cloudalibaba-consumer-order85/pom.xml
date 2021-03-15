@@ -9,9 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-gateway-gateway9527</artifactId>
-
-
+    <artifactId>cloudalibaba-consumer-order85</artifactId>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -24,25 +22,10 @@
             <version>3.0.1</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-web</artifactId>-->
-<!--        </dependency>-->
-
-        <!--        common公用依赖-->
-<!--        <dependency>-->
-<!--            <groupId>com.loonmall</groupId>-->
-<!--            <artifactId>loonmall-common</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--            &lt;!&ndash;            gateway和spingMVC依赖冲突，使用exclusions去除它&ndash;&gt;-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>org.springframework.boot</groupId>-->
-<!--                    <artifactId>spring-boot-starter-web</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!--spring boot 2.2.2-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -85,23 +68,20 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.cloud</groupId>-->
-<!--            <artifactId>cloud-api-commons</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-gateway -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <groupId>org.cloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
 
-        <!--这里插入依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2.2.5.RELEASE</version>
+        </dependency>
+        <!--        这里插入注解-->
     </dependencies>
     <build>
         <plugins>
@@ -116,14 +96,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
+
 </project>
