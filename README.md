@@ -23,7 +23,9 @@ SpringCloud的學習心路歷程以及筆記
 * Stream - 消息驱动
 * Sleuth - 调用链路分析
 * SpringCloud Alibaba简介
-* Nacos - 全家桶
+* Nacos - 服务注册中心和配置中心
+* Nacos - Mysql持久化配置
+* Nacos - 集群配置
 ### Contact Author
 石桂華(Skwen) https://blog.iskwen.com
 # END
