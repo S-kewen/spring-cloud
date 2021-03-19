@@ -26,7 +26,9 @@ SpringCloud的學習心路歷程以及筆記
 * Nacos - 服务注册中心和配置中心
 * Nacos - Mysql持久化配置
 * Nacos - 集群配置
-* Nacos - Sentinel服务熔断
+* Sentinel - 服务控流
+* Sentinel - 服务降级
+* Sentinel - 系统自适应限流
 ### Contact Author
 石桂華(Skwen) https://blog.iskwen.com
 # END
