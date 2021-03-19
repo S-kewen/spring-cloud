@@ -9,9 +9,9 @@ SpringCloud的學習心路歷程以及筆記
 ### 主要知识点
 * SpringCloud的介绍
 * 父工程的创立
-* 注册中心 - Eureka
-* 注册中心 - Zookeeper
-* 注册中心 - Consule(推荐)
+* 服务注册中心 - Eureka(推荐)
+* 服务注册中心 - Zookeeper
+* 服务注册中心 - Consule(推荐)
 * 通过服务中心实现集群负载均衡
 * Ribbon算法
 * OpenFeign - 服务调用
@@ -26,6 +26,7 @@ SpringCloud的學習心路歷程以及筆記
 * Nacos - 服务注册中心和配置中心
 * Nacos - Mysql持久化配置
 * Nacos - 集群配置
+* Nacos - Sentinel服务熔断
 ### Contact Author
 石桂華(Skwen) https://blog.iskwen.com
 # END
