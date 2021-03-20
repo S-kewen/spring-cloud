@@ -32,6 +32,11 @@
         <module>cloudalibaba-consumer-order85</module>
         <module>cloudalibaba-config-nacos-client3377</module>
         <module>cloudalibaba-sentinel-service8100</module>
+        <module>cloudalibaba-consumer-order86</module>
+        <module>cloudalibaba-seata-service-order9000</module>
+        <module>cloudalibaba-seata-service-storage9001</module>
+        <module>cloudalibaba-seata-service-account9002</module>
+        <module>cloudalibaba-seata-consumer-order9100</module>
     </modules>
     <packaging>pom</packaging>
 

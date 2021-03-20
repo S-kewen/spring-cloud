@@ -2,9 +2,11 @@ package com.cloud.springcloud.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.cloud.springcloud.config.CustomerBlockHandler;
 import com.cloud.springcloud.result.Result;
 import com.cloud.springcloud.result.StatusCode;
 import com.cloud.springcloud.result.StatusMsg;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/sentinel")
 public class SentinelController {
+    @Value("${server.port}")
+    private String port;
     @RequestMapping("test")
     public Result test() {
         return new Result(StatusCode.OK, StatusMsg.OK);
@@ -36,5 +40,18 @@ public class SentinelController {
 
     public Result deal_hotKey(String p1, String p2, BlockException e) {
         return new Result(StatusCode.FALLBACK, StatusMsg.FALLBACK);
+    }
+
+    @RequestMapping("handler")
+    @SentinelResource(value = "handler", blockHandlerClass = CustomerBlockHandler.class, blockHandler = "fallback")
+    public Result handler() {
+        return new Result(StatusCode.OK, StatusMsg.OK);
+    }
+
+
+    @RequestMapping("port")
+    @SentinelResource(value = "port", blockHandlerClass = CustomerBlockHandler.class, blockHandler = "fallback")
+    public Result port() {
+        return new Result(StatusCode.OK, StatusMsg.OK,port);
     }
 }

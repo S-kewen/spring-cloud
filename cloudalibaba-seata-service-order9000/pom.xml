@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloudalibaba-sentinel-service8100</artifactId>
-
+    <artifactId>cloudalibaba-seata-service-order9000</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
@@ -58,7 +57,12 @@
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
         </dependency>
-
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis.spring.boot.version}</version>
+        </dependency>
         <!--junit-->
         <dependency>
             <groupId>junit</groupId>
@@ -71,7 +75,12 @@
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
@@ -99,13 +108,36 @@
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-sentinel -->
+        <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-alibaba-seata -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-            <version>2.2.5.RELEASE</version>
+            <artifactId>spring-cloud-alibaba-seata</artifactId>
+            <version>2.2.0.RELEASE</version>
         </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.seata/seata-all -->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-all</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.seata/seata-spring-boot-starter -->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring-boot-starter</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
 
         <!--        这里插入注解-->
     </dependencies>
@@ -125,4 +157,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

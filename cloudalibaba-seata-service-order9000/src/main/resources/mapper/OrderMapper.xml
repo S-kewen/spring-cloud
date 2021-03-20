@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloud.springcloud.dao.OrderDao">
+    <insert id="create" parameterType="com.cloud.springcloud.entity.Order" useGeneratedKeys="true" keyProperty="id">
+        insert into t_order values(0,#{user_id},#{product_id},#{count},#{money},#{status})
+    </insert>
+    <update id="updateOne" parameterType="com.cloud.springcloud.entity.Order">
+        update t_order
+        <set>
+            <if test="status!=null and status!=''">status=#{status},</if>
+        </set>
+        where id=#{id} limit 1
+    </update>
+</mapper>

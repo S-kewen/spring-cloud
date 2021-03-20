@@ -15,4 +15,6 @@ public class StatusMsg {
     public static final String BREAK =  "break";//服务熔断
     public static final String INSERTFAIL = "insert fail";//插入数据失败
     public static final String SELECTFAIL = "select fail";//查询数据失败
+    public static final String FLOWLIMIT = "flow limit";//限流
+    public static final String UPDATEFAIL = "update fail";//更新失败
 }

@@ -29,6 +29,7 @@ SpringCloud的學習心路歷程以及筆記
 * Sentinel - 服务控流
 * Sentinel - 服务降级
 * Sentinel - 系统自适应限流
+* seata - 一站式分布式事务解决方案
 ### Contact Author
 石桂華(Skwen) https://blog.iskwen.com
 # END

@@ -1,8 +1,8 @@
 server:
-  port: 8100
+  port: 9100
 spring:
   application:
-    name: cloud-sentinel-service
+    name: cloud-seata-consumer-order
   cloud:
     nacos:
       discovery:
@@ -11,15 +11,6 @@ spring:
       transport:
         dashboard: localhost:8080
         port: 8719 #默认8719，被占用的话会自动向8720后进行扫描
-      datasource:
-        ds1:
-          nacos:
-            server-addr: localhost:8848
-            dataId: cloud-sentinel-service
-            groupId: DEFAULT_GROUP
-            data-type: json
-            rule-type: flow
-
   mvc:
     throw-exception-if-no-handler-found: true
   resources:

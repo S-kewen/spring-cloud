@@ -14,6 +14,7 @@ public class StatusCode {
     public static final int FALLBACK = 502;//服务降级
     public static final int BREAK = 503;//服务熔断
     public static final int INSERTFAIL = -1000;//插入数据失败
-    public static final int SELECTFAIL = -1000;//查询数据失败
-
+    public static final int SELECTFAIL = -1001;//查询数据失败
+    public static final int FLOWLIMIT = -1002;//限流
+    public static final int UPDATEFAIL = -1003;//更新失败
 }

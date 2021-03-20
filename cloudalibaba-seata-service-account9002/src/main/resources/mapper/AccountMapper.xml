@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloud.springcloud.dao.AccountDao">
+    <update id="updateOne" parameterType="com.cloud.springcloud.entity.Account">
+        update t_account
+        <set>
+            <if test="used!=null and used!=''">used=used+#{used},residue=residue-#{used},</if>
+        </set>
+        where id=#{id} limit 1
+    </update>
+</mapper>
