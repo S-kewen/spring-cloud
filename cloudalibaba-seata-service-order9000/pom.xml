@@ -108,6 +108,7 @@
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-alibaba-seata -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -130,15 +131,12 @@
             <artifactId>seata-spring-boot-starter</artifactId>
             <version>1.4.0</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>3.0.1</version>
         </dependency>
-
-
         <!--        这里插入注解-->
     </dependencies>
     <build>

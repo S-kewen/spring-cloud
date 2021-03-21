@@ -33,7 +33,6 @@ public class OrderServiceImpl implements OrderService {
     @GlobalTransactional(name = "cloud-seata-service-order-create", rollbackFor = Exception.class)
     //事务发起方 TM
     public int create(Order order) {
-
         log.info("订单创建...........");
         dao.create(order);
         log.info("订单创建成功.......");

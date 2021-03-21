@@ -60,7 +60,6 @@ mybatis:
   type-aliases-package: com.cloud.springcloud.entity.**
 
 seata:
-  enabled: true
   enable-auto-data-source-proxy: true
   tx-service-group: my_test_tx_group
   registry:

@@ -30,8 +30,16 @@ public class AccountController {
         Account account = new Account();
         account.setId(uid);
         account.setUsed(money);
-        int a = 1/0;
+       int a = 1/0;
         //模拟异常
+//        try
+//        {
+//            Thread.sleep(3000);    //延时2秒
+//        }
+//        catch(InterruptedException e)
+//        {
+//            e.printStackTrace();
+//        }
         if (accountService.updateOne(account) > 0) {
             return new Result(StatusCode.OK, StatusMsg.OK);
         }

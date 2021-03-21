@@ -4,8 +4,8 @@
     <update id="updateOne" parameterType="com.cloud.springcloud.entity.Account">
         update t_account
         <set>
-            <if test="used!=null and used!=''">used=used+#{used},residue=residue-#{used},</if>
-        </set>
+            <if test="used!=null and used!=''">used=used+#{used},</if>
+    </set>
         where id=#{id} limit 1
     </update>
 </mapper>
