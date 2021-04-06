@@ -1,36 +1,37 @@
 # Spring Cloud
-### SpringCloud是什么？
-* Spring Cloud是一系列框架的有序集合。它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。
+![](https://upload.cc/i1/2021/04/06/5dIk0h.jpg)
+### SpringCloud是什麽？
+* Spring Cloud是一系列框架的有序集合。它利用Spring Boot的開發便利性巧妙地簡化了分布式系統基礎設施的開發，如服務發現註冊、配置中心、消息總線、負載均衡、斷路器、數據監控等，都可以用Spring Boot的開發風格做到一鍵啟動和部署。
 ### 綱要
 SpringCloud的學習心路歷程以及筆記
-### 学习链接
+### 學習鏈接
 * https://www.bilibili.com/video/BV18E411x7eT
   
-### 主要知识点
-* SpringCloud的介绍
-* 父工程的创立
-* 服务注册中心 - Eureka(推荐)
-* 服务注册中心 - Zookeeper
-* 服务注册中心 - Consule(推荐)
-* 通过服务中心实现集群负载均衡
+### 主要知識點
+* SpringCloud的介紹
+* 父工程的創立
+* 服務註冊中心 - Eureka(推薦)
+* 服務註冊中心 - Zookeeper
+* 服務註冊中心 - Consule(推薦)
+* 通過服務中心實現集群負載均衡
 * Ribbon算法
-* OpenFeign - 服务调用
-* Hystrix - 豪猪哥
-* Gateway - 网关
+* OpenFeign - 服務調用
+* Hystrix - 豪豬哥
+* Gateway - 網關
 * Config - 分布式配置中心
-* Bus - 消息总线
-* RabbitMQ - 消息队列
-* Stream - 消息驱动
-* Sleuth - 调用链路分析
-* SpringCloud Alibaba简介
-* Nacos - 服务注册中心和配置中心
+* Bus - 消息總線
+* RabbitMQ - 消息隊列
+* Stream - 消息驅動
+* Sleuth - 調用鏈路分析
+* SpringCloud Alibaba簡介
+* Nacos - 服務註冊中心和配置中心
 * Nacos - Mysql持久化配置
 * Nacos - 集群配置
-* Sentinel - 服务控流
-* Sentinel - 服务降级
-* Sentinel - 系统自适应限流
-* seata - 一站式分布式事务解决方案
-### Contact Author
+* Sentinel - 服務控流
+* Sentinel - 服務降級
+* Sentinel - 系統自適應限流
+* seata - 一站式分布式事務解決方案
+## Contact Author
 石桂華(Skwen) https://blog.iskwen.com
 # END
 * Thank you for watching.
