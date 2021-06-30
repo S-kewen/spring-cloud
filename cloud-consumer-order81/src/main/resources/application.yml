@@ -1,8 +1,0 @@
-server:
-  port: 81
-spring:
-  cloud:
-    zookeeper:
-      connect-string: localhost:2181
-  application:
-    name: cloud-consumer-service-order-81
